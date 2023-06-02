@@ -18,10 +18,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: black;
+}
+
+.mainGrid{
+  grid-template-columns: 0.25fr 1fr;
+}
+
+.masonry {
+  /* Create the columns */
+  columns: 3;
+}
+
+.masonry img {
+  /* Make the images responsive */
+  width: 100%;
+  display: block;
 }

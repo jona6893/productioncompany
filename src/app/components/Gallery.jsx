@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Gallery({ isMobile }) {
@@ -28,7 +29,7 @@ function Gallery({ isMobile }) {
             src={urls[3]}
             alt=""
           />
-          <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
+          <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center">
             <h3 className="text-xl">HOLD KÆFT</h3>
           </div>
         </div>

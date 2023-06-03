@@ -71,7 +71,7 @@ const [curMenu, setCurMenu] = useState(0);
           rel="stylesheet"
         />
       </Head>
-      <main className="md:grid mainGrid gap-4 p-4">
+      <main className="md:grid mainGrid gap-4 p-4 ">
         <div>
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
         </div>

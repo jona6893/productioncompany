@@ -62,14 +62,14 @@ const years = ["2019","2020","2021","2022","2023"]
 
 
   return (
-    <div>
+    <div className='pageSection'>
         {years.reverse().map((year) => (
             <>
             <h2 className='text-9xl pb-4 px-4'>{year}</h2>
             {projects.map((project) => {
                 if(project.year === year)
               return (
-                <article className='text-white p-6 flex max-md:flex-col gap-4'>
+                <article id={project.title.toLowerCase().replaceAll(' ', '')} className='text-white p-6 flex max-md:flex-col gap-4'>
                   <img className={`${!isMobile && "max-h-[500px]"} aspect-[2/3]`} src={project.img} alt="" />
                   <div className='flex flex-col gap-4'>
                     <h3 className='text-3xl'>{project.title}</h3>

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import lozad from "lozad";
+
 
 function Gallery({ isMobile }) {
   const urls = [
@@ -20,8 +19,6 @@ function Gallery({ isMobile }) {
     "images/pic13.webp",
   ];
 
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-  observer.observe();
 
   return (
     <>
@@ -39,7 +36,7 @@ function Gallery({ isMobile }) {
             loop={true}
             autoPlay={true}
             poster="/images/pic3.webp"
-            className={`block w-full h-full scale-[1.12] lozad`}
+            className={`block w-full h-full scale-[1.12]`}
           >
             <source
               src={"https://meritfilm.dk/Playground/videos/webvideo5s.mp4"}
@@ -93,7 +90,7 @@ function Gallery({ isMobile }) {
             loop={true}
             autoPlay={true}
             poster="/images/pic11.webp"
-            className={`block w-full h-full scale-[1.33] lozad`}
+            className={`block w-full h-full scale-[1.33]`}
           >
             <source
               src={"https://meritfilm.dk/Playground/videos/hybenVideo.mp4"}

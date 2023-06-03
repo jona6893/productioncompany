@@ -65,7 +65,7 @@ const years = ["2019","2020","2021","2022","2023"]
     <div>
         {years.reverse().map((year) => (
             <>
-            <h2 className='text-9xl py-8'>{year}</h2>
+            <h2 className='text-9xl pb-4 px-4'>{year}</h2>
             {projects.map((project) => {
                 if(project.year === year)
               return (

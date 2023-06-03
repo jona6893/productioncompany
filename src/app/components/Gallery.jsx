@@ -18,7 +18,7 @@ function Gallery() {
     "images/pic13.webp",
   ];
   return (
-    <div className="grid grid-cols-3 gap-3 ">
+    <div className="grid grid-cols-3 gap-3 text-white">
       <div className="relative group col-span-2 overflow-hidden">
         <img
           className={`block w-full h-full scale-[1.12]`}

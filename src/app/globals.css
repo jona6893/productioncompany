@@ -17,7 +17,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: black;
 }
 
@@ -38,4 +37,5 @@ body {
 
 h1,h2,h3,h4,h5,h6,a,p, address{
   font-family: 'Playfair Display', serif;
+  color: white;
 }

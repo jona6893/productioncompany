@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
+import Projects from "./components/Projects";
 
 // Define your animations
 const pageVariants = {
@@ -64,10 +65,22 @@ export default function Home() {
               variants={pageVariants}
               transition={pageTransition}
             >
-              <Contact />
+              <Projects />
             </motion.div>
           )}
           {curMenu === 2 && (
+            <motion.div
+              key="about"
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Contact />
+            </motion.div>
+          )}
+          {curMenu === 3 && (
             <motion.div
               key="about"
               initial="initial"

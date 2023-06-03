@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import lozad from "lozad";
 
 function Gallery({ isMobile }) {
   const urls = [
@@ -19,20 +20,35 @@ function Gallery({ isMobile }) {
     "images/pic13.webp",
   ];
 
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 
   return (
     <>
       <div className="grid md:grid-cols-3 gap-3 text-white pt-4">
         <div className="relative group col-span-2 overflow-hidden">
-          <Image
+          {/* <Image
             className={`block w-full h-full scale-[1.12]`}
             src={"/" + urls[3]}
             width={1920}
             height={1080}
             alt=""
-          />
+          /> */}
+          <video
+            muted={true}
+            loop={true}
+            autoPlay={true}
+            poster="/images/pic3.webp"
+            className={`block w-full h-full scale-[1.12] lozad`}
+          >
+            <source
+              src={"https://meritfilm.dk/Playground/videos/webvideo5s.mp4"}
+              type="video/mp4"
+            />
+          </video>
+
           <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center">
-            <h3 className="text-xl">HOLD KÆFT</h3>
+            <h3 className="md:text-xl text-center">HOLD KÆFT</h3>
           </div>
         </div>
 
@@ -47,7 +63,7 @@ function Gallery({ isMobile }) {
             alt=""
           />
           <div className="bg-emerald-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">BJARKE TØMMER SKRALD</h3>
+            <h3 className="md:text-xl text-center">BJARKE TØMMER SKRALD</h3>
           </div>
         </div>
         <div className="relative group flex items-center justify-center">
@@ -59,20 +75,33 @@ function Gallery({ isMobile }) {
             alt=""
           />
           <div className="bg-black/75 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">AWARD & NOMINEES</h3>
+            <h3 className="md:text-xl text-center">AWARD & NOMINEES</h3>
           </div>
         </div>
 
         <div className="relative group col-span-2 overflow-hidden">
-          <Image
+          {/* <Image
             className={`block w-full scale-[1.33]`}
             src={"/" + urls[0]}
             alt=""
             width={1920}
             height={1080}
-          />
+            priority={false}
+          /> */}
+          <video
+            muted={true}
+            loop={true}
+            autoPlay={true}
+            poster="/images/pic11.webp"
+            className={`block w-full h-full scale-[1.33] lozad`}
+          >
+            <source
+              src={"https://meritfilm.dk/Playground/videos/hybenVideo.mp4"}
+              type="video/mp4"
+            />
+          </video>
           <div className="bg-rose-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">HYBENHJERT</h3>
+            <h3 className="md:text-xl text-center">HYBENHJERT</h3>
           </div>
         </div>
 
@@ -83,9 +112,10 @@ function Gallery({ isMobile }) {
             alt=""
             width={1920}
             height={1080}
+            priority={false}
           />
           <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">HOLD KÆFT</h3>
+            <h3 className="md:text-xl text-center">HOLD KÆFT</h3>
           </div>
         </div>
 
@@ -96,9 +126,10 @@ function Gallery({ isMobile }) {
             alt=""
             width={1920}
             height={1080}
+            priority={false}
           />
           <div className="bg-rose-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">HYBENHJERT</h3>
+            <h3 className="md:text-xl text-center">HYBENHJERT</h3>
           </div>
         </div>
 
@@ -109,9 +140,10 @@ function Gallery({ isMobile }) {
             alt=""
             width={1920}
             height={1080}
+            priority={false}
           />
           <div className="bg-emerald-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
-            <h3 className="text-xl">BJARKE TØMMER SKRALD</h3>
+            <h3 className="md:text-xl text-center">BJARKE TØMMER SKRALD</h3>
           </div>
         </div>
       </div>

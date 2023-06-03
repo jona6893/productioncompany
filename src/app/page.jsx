@@ -76,7 +76,7 @@ const [curMenu, setCurMenu] = useState(0);
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
         </div>
         <div ref={parent}>
-       <Page/>
+          <Page isMobile={isMobile} />
         </div>
       </main>
     </>

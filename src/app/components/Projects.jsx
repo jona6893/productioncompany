@@ -65,15 +65,22 @@ const years = ["2019","2020","2021","2022","2023"]
     <div className='pageSection'>
         {years.reverse().map((year) => (
             <>
-            <h2 className='text-9xl pb-4 px-4'>{year}</h2>
+            <h2 className='text-9xl pb-4 md:px-4'>{year}</h2>
             {projects.map((project) => {
                 if(project.year === year)
               return (
-                <article id={project.title.toLowerCase().replaceAll(' ', '')} className='text-white p-6 flex max-md:flex-col gap-4'>
-                  <img className={`${!isMobile && "max-h-[500px]"} aspect-[2/3]`} src={project.img} alt="" />
-                  <div className='flex flex-col gap-4'>
-                    <h3 className='text-3xl'>{project.title}</h3>
-                    <p className='max-w-[60ch]'>{project.des}</p>
+                <article
+                  id={project.title.toLowerCase().replaceAll(" ", "")}
+                  className="text-white md:p-6 flex max-md:flex-col gap-4"
+                >
+                  <img
+                    className={`md:max-h-[500px] aspect-[2/3]`}
+                    src={project.img}
+                    alt=""
+                  />
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-3xl">{project.title}</h3>
+                    <p className="max-w-[60ch]">{project.des}</p>
                     <p>{project.type}</p>
                     <p>Status: {project.status}</p>
                   </div>

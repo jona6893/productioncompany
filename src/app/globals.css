@@ -39,3 +39,18 @@ h1,h2,h3,h4,h5,h6,a,p, address{
   font-family: 'Playfair Display', serif;
   color: white;
 }
+
+.slide-in-out {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  background-color: black;
+}
+
+.slide-in-out.open {
+  transform: translateX(0%);
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Projects() {
+function Projects({isMobile}) {
 
 const projects = [
   {
@@ -69,8 +69,8 @@ const years = ["2019","2020","2021","2022","2023"]
             {projects.map((project) => {
                 if(project.year === year)
               return (
-                <article className='text-white p-6 flex gap-4'>
-                  <img className='max-h-[500px] aspect-[2/3]' src={project.img} alt="" />
+                <article className='text-white p-6 flex max-md:flex-col gap-4'>
+                  <img className={`${!isMobile && "max-h-[500px]"} aspect-[2/3]`} src={project.img} alt="" />
                   <div className='flex flex-col gap-4'>
                     <h3 className='text-3xl'>{project.title}</h3>
                     <p className='max-w-[60ch]'>{project.des}</p>
@@ -79,6 +79,7 @@ const years = ["2019","2020","2021","2022","2023"]
                   </div>
                 </article>
               );
+
             }
             )}
             </>

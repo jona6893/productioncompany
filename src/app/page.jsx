@@ -1,7 +1,7 @@
 "use client";
 import Menu from "./components/Menu";
 import Gallery from "./components/Gallery";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,6 +23,22 @@ const pageTransition = {
 };
 
 export default function Home() {
+const [isMobile, setIsMobile] = useState(false);
+
+ useEffect(() => {
+   const checkIfMobile = () => {
+     setIsMobile(window.innerWidth <= 768);
+   };
+
+   checkIfMobile();
+   window.addEventListener("resize", checkIfMobile);
+
+   return () => {
+     window.removeEventListener("resize", checkIfMobile);
+   };
+ }, []);
+
+
   const [curMenu, setCurMenu] = useState(0);
 
   return (
@@ -39,9 +55,9 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <main className="grid mainGrid mt-12 gap-4 p-4">
+      <main className="md:grid mainGrid mt-12 gap-4 p-4">
         <div>
-          <Menu setCurMenu={setCurMenu} />
+          <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
         </div>
         <AnimatePresence mode="wait">
           {curMenu === 0 && (
@@ -53,7 +69,7 @@ export default function Home() {
               variants={pageVariants}
               transition={pageTransition}
             >
-              <Gallery />
+              <Gallery isMobile={isMobile} />
             </motion.div>
           )}
           {curMenu === 1 && (
@@ -65,7 +81,7 @@ export default function Home() {
               variants={pageVariants}
               transition={pageTransition}
             >
-              <Projects />
+              <Projects isMobile={isMobile} />
             </motion.div>
           )}
           {curMenu === 2 && (

@@ -62,12 +62,12 @@ const years = ["2019","2020","2021","2022","2023"]
 
 
   return (
-    <div className='pageSection'>
-        {years.reverse().map((year) => (
-            <>
-            <h2 className='text-9xl pb-4 md:px-4'>{year}</h2>
-            {projects.map((project) => {
-                if(project.year === year)
+    <div className="pageSection">
+      {years.reverse().map((year) => (
+        <>
+          <h2 className="text-9xl pb-4 md:px-4">{year}</h2>
+          {projects.map((project) => {
+            if (project.year === year)
               return (
                 <article
                   id={project.title.toLowerCase().replaceAll(" ", "")}
@@ -86,13 +86,11 @@ const years = ["2019","2020","2021","2022","2023"]
                   </div>
                 </article>
               );
-
-            }
-            )}
-            </>
-        ))}
+          })}
+        </>
+      ))}
     </div>
-  )
+  );
 }
 
 export default Projects

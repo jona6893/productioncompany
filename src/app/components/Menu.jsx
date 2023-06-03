@@ -23,7 +23,7 @@ function Menu({ setCurMenu, isMobile }) {
           setCurMenu={setCurMenu}
         />
       ) : (
-        <nav className="text-white p-4 flex flex-col gap-4 sticky top-0">
+        <nav className="text-white flex flex-col gap-4 sticky top-0">
           <h1
             className="grid text-7xl w-fit cursor-pointer"
             onClick={() => setCurMenu(() => 0)}

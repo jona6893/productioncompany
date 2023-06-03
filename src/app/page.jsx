@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Projects from "./components/Projects";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import ToTop from "./components/ToTop";
 
 // Define your animations
 const pageVariants = {

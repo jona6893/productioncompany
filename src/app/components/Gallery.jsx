@@ -21,7 +21,7 @@ function Gallery({ isMobile }) {
   return (
     <>
       
-      <div className="grid md:grid-cols-3 gap-3 text-white">
+      <div className="grid md:grid-cols-3 gap-3 text-white pt-4">
         <div className="relative group col-span-2 overflow-hidden">
           <img
             className={`block w-full h-full scale-[1.12]`}

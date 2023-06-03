@@ -7,6 +7,7 @@ import About from "./components/About";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Projects from "./components/Projects";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 // Define your animations
 const pageVariants = {
@@ -24,6 +25,8 @@ const pageTransition = {
 
 export default function Home() {
 const [isMobile, setIsMobile] = useState(false);
+const [curMenu, setCurMenu] = useState(0);
+ const [parent] = useAutoAnimate();
 
  useEffect(() => {
    const checkIfMobile = () => {
@@ -39,7 +42,20 @@ const [isMobile, setIsMobile] = useState(false);
  }, []);
 
 
-  const [curMenu, setCurMenu] = useState(0);
+
+  let Page;
+  if(curMenu === 0) {
+    Page = Gallery
+  } else if(curMenu === 1) {
+    Page = Projects
+  } else if(curMenu === 2) {
+    Page = Contact
+  } else if(curMenu === 3) {
+    Page = About
+  }
+
+
+
 
   return (
     <>
@@ -55,62 +71,67 @@ const [isMobile, setIsMobile] = useState(false);
           rel="stylesheet"
         />
       </Head>
-      <main className="md:grid mainGrid mt-12 gap-4 p-4">
+      <main className="md:grid mainGrid gap-4 p-4">
         <div>
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
         </div>
-        <AnimatePresence mode="wait">
-          {curMenu === 0 && (
-            <motion.div
-              key="gallery"
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <Gallery isMobile={isMobile} />
-            </motion.div>
-          )}
-          {curMenu === 1 && (
-            <motion.div
-              key="contact"
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <Projects isMobile={isMobile} />
-            </motion.div>
-          )}
-          {curMenu === 2 && (
-            <motion.div
-              key="about"
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <Contact />
-            </motion.div>
-          )}
-          {curMenu === 3 && (
-            <motion.div
-              key="about"
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <About />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div ref={parent}>
+       <Page/>
+        </div>
       </main>
     </>
   );
 }
 
+
+
+/*  <AnimatePresence mode="wait">
+   {curMenu === 0 && (
+     <motion.div
+       key="gallery"
+       initial="initial"
+       animate="in"
+       exit="out"
+       variants={pageVariants}
+       transition={pageTransition}
+     >
+       <Gallery isMobile={isMobile} />
+     </motion.div>
+   )}
+   {curMenu === 1 && (
+     <motion.div
+       key="contact"
+       initial="initial"
+       animate="in"
+       exit="out"
+       variants={pageVariants}
+       transition={pageTransition}
+     >
+       <Projects isMobile={isMobile} />
+     </motion.div>
+   )}
+   {curMenu === 2 && (
+     <motion.div
+       key="about"
+       initial="initial"
+       animate="in"
+       exit="out"
+       variants={pageVariants}
+       transition={pageTransition}
+     >
+       <Contact />
+     </motion.div>
+   )}
+   {curMenu === 3 && (
+     <motion.div
+       key="about"
+       initial="initial"
+       animate="in"
+       exit="out"
+       variants={pageVariants}
+       transition={pageTransition}
+     >
+       <About />
+     </motion.div>
+   )}
+ </AnimatePresence>; */

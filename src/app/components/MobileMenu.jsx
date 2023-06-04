@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import React from 'react'
 
 function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
@@ -20,12 +21,13 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
   return (
     <>
       <div className="sticky top-0 flex w-full items-center justify-between pb-4">
+       <Link href={"/"}>
         <p
         className='cursor-pointer'
-        onClick={() => {setCurMenu(() => 0)}}
+        
         >
           U.S.H. Media
-        </p>
+        </p></Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,12 +72,12 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                   />
                 </svg>
               </div>
-
+            <Link href={"/"}>
               <h1
                 className="grid text-7xl w-fit cursor-pointer"
                 onClick={() => {
                   setIsOpen(!isOpen);
-                  setCurMenu(() => 0);
+                 
                 }}
               >
                 <span className="flex justify-between">
@@ -84,18 +86,17 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                   <div>H.</div>
                 </span>
                 MEDIA
-              </h1>
+              </h1></Link>
               <ul className="text-lg grid gap-2">
                 {menu.map((menu, index) => (
-                  <li key={index}
+                  <Link href={menu.toLowerCase()}><li key={index}
                     className="hover:text-gray-400 cursor-pointer"
                     onClick={() => {
                       setIsOpen(!isOpen);
-                      setCurMenu(() => index + 1);
                     }}
                   >
                     {menu}
-                  </li>
+                  </li></Link>
                 ))}
               </ul>
             </nav>

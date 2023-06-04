@@ -32,6 +32,8 @@ function Gallery({ isMobile }) {
             alt=""
           /> */}
           <video
+          playsinline
+          webkit-playsinline={true}
             muted={true}
             loop={true}
             autoPlay={true}
@@ -86,6 +88,8 @@ function Gallery({ isMobile }) {
             priority={false}
           /> */}
           <video
+          playsinline
+          webkit-playsinline={true}
             muted={true}
             loop={true}
             autoPlay={true}

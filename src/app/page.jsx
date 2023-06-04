@@ -2,8 +2,8 @@
 import Menu from "./components/Menu";
 import Gallery from "./components/Gallery";
 import { useEffect, useState } from "react";
-import Contact from "./components/Contact";
-import About from "./components/About";
+import Contact from "./contact/page";
+import About from "./about/page";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Projects from "./components/Projects";
@@ -26,7 +26,6 @@ const pageTransition = {
 
 export default function Home() {
 const [isMobile, setIsMobile] = useState(false);
-const [curMenu, setCurMenu] = useState(0);
  const [parent] = useAutoAnimate();
 
  useEffect(() => {
@@ -44,17 +43,7 @@ const [curMenu, setCurMenu] = useState(0);
 
 
 
-  let Page;
-  if(curMenu === 0) {
-    Page = Gallery
-  } else if(curMenu === 1) {
-    Page = Projects
-  } else if(curMenu === 2) {
-    Page = Contact
-  } else if(curMenu === 3) {
-    Page = About
-  }
-
+ 
 
 
 
@@ -72,12 +61,12 @@ const [curMenu, setCurMenu] = useState(0);
           rel="stylesheet"
         />
       </Head>
-      <main className="md:grid mainGrid gap-4 p-4 ">
-        <div>
+      <main className="">
+        {/* <div>
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
-        </div>
+        </div> */}
         <div ref={parent}>
-          <Page isMobile={isMobile} />
+          <Gallery isMobile={isMobile} />
         </div>
       </main>
     </>

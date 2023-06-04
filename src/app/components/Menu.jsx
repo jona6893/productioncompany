@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
 
 
@@ -24,9 +25,10 @@ function Menu({ setCurMenu, isMobile }) {
         />
       ) : (
         <nav className="text-white flex flex-col gap-4 sticky top-0">
+          <Link href={"/"}>
           <h1
             className="grid text-7xl w-fit cursor-pointer"
-            onClick={() => setCurMenu(() => 0)}
+           
           >
             <span className="flex justify-between">
               <div>U.</div>
@@ -34,15 +36,14 @@ function Menu({ setCurMenu, isMobile }) {
               <div>H.</div>
             </span>
             MEDIA
-          </h1>
+          </h1></Link>
           <ul className="text-lg grid gap-2">
             {menu.map((menu, index) => (
-              <li key={index}
+              <Link href={menu.toLowerCase()}><li key={index}
                 className="hover:text-gray-400 cursor-pointer"
-                onClick={() => setCurMenu(() => index + 1)}
               >
                 {menu}
-              </li>
+              </li></Link>
             ))}
           </ul>
         </nav>

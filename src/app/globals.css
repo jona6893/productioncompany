@@ -21,7 +21,7 @@ body {
 }
 
 .mainGrid{
-  grid-template-columns: 0.25fr 1fr;
+  grid-template-columns: auto auto;
 }
 
 .masonry {

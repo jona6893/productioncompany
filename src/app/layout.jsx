@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         ref={parent}
-        className={`md:grid mainGrid gap-4 p-4 ${inter.className}`}
+        className={`md:inline-grid mainGrid gap-4 max-md:p-4 p-8 ${inter.className}`}
       >
         <div>
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />

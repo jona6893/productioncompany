@@ -1,14 +1,9 @@
 "use client";
-import Menu from "./components/Menu";
 import Gallery from "./components/Gallery";
 import { useEffect, useState } from "react";
-import Contact from "./contact/page";
-import About from "./about/page";
-import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
-import Projects from "./components/Projects";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import ToTop from "./components/ToTop";
+
 
 // Define your animations
 const pageVariants = {

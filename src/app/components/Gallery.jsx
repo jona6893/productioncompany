@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 
@@ -45,10 +46,10 @@ function Gallery({ isMobile }) {
               type="video/mp4"
             />
           </video>}
-
+<Link href={"/projects/#holdkæft"}>
           <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center">
             <h3 className="md:text-xl text-center">HOLD KÆFT</h3>
-          </div>
+          </div></Link>
         </div>
 
         <div className="relative group">
@@ -61,9 +62,10 @@ function Gallery({ isMobile }) {
             height={1080}
             alt=""
           />
+          <Link href={"/projects/#bjarketømmerskrald"}>
           <div className="bg-emerald-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">BJARKE TØMMER SKRALD</h3>
-          </div>
+          </div></Link>
         </div>
         <div className="relative group flex items-center justify-center">
           <Image
@@ -101,9 +103,10 @@ function Gallery({ isMobile }) {
               type="video/mp4"
             />
           </video>}
+          <Link href={"/projects/#hybenhjert"}>
           <div className="bg-rose-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">HYBENHJERT</h3>
-          </div>
+          </div></Link>
         </div>
 
         <div className="relative group overflow-hidden">
@@ -115,9 +118,10 @@ function Gallery({ isMobile }) {
             height={1080}
             priority={false}
           />
+          <Link href={"/projects/#holdkæft"}>
           <div className="bg-yellow-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">HOLD KÆFT</h3>
-          </div>
+          </div></Link>
         </div>
 
         <div className="relative group overflow-hidden">
@@ -129,9 +133,10 @@ function Gallery({ isMobile }) {
             height={1080}
             priority={false}
           />
+          <Link href={"/projects/#hybenhjert"}>
           <div className="bg-rose-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">HYBENHJERT</h3>
-          </div>
+          </div></Link>
         </div>
 
         <div className={`relative group ${isMobile && "col-span-2"}`}>
@@ -143,9 +148,10 @@ function Gallery({ isMobile }) {
             height={1080}
             priority={false}
           />
+          <Link href={"/projects/#bjarketømmerskrald"}>
           <div className="bg-emerald-500/25 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">BJARKE TØMMER SKRALD</h3>
-          </div>
+          </div></Link>
         </div>
       </div>
     </>

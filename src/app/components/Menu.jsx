@@ -33,7 +33,7 @@ function Menu({ setCurMenu }) {
           setCurMenu={setCurMenu}
         />
       ) : (
-        <nav className="text-white flex flex-col gap-4 sticky top-0">
+        <nav className="text-white flex flex-col gap-8 sticky top-0">
           <Link href={"/"}>
             <h1 className="grid text-7xl w-fit cursor-pointer">
               <span className="flex justify-between">
@@ -44,11 +44,14 @@ function Menu({ setCurMenu }) {
               MEDIA
             </h1>
           </Link>
-          <ul className="text-lg grid gap-2">
+          <ul className="text-lg grid gap-4">
             {menu.map((menu, index) => (
               <Link href={menu.toLowerCase()}>
-                <li key={index} className="hover:text-gray-400 cursor-pointer">
-                  {menu}
+                <li
+                  key={index}
+                  className="hover:text-gray-400 cursor-pointer tracking-widest	"
+                >
+                  {menu.toUpperCase()}
                 </li>
               </Link>
             ))}

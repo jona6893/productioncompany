@@ -2,20 +2,25 @@ import React from "react";
 
 function Contact() {
   return (
-    <div>
+    <div className="w-full">
       <p>PLACEHOLDER NOT STYLED AT ALL</p>
-      <div className="w-fit m-auto flex flex-col gap-4 items-center p-4">
-        <h2 className="text-3xl">Contact</h2>
-        <address className="flex flex-col gap-2 items-center">
-          Write to us at:
-          <a href="mailto:webmaster@example.com">webmaster@example.com</a>
-          <span>
+      <div className="w-fit m-auto flex flex-col gap-8 items-center p-4">
+        <h2 className="text-4xl">Contact</h2>
+        <div className="flex flex-wrap items-center justify-center">
+          <address className="flex flex-col gap-2 items-center justify-center  p-4 text-center">
+            Write to us at:
+            <a href="mailto:webmaster@example.com">webmaster@example.com</a>
+          </address>
+          <address className="flex flex-col gap-2 items-center justify-center  p-4 text-center">
             Call us on: <a href="tel:76482753">76 48 27 53</a>
-          </span>
-          Københavngade 32A, <br /> københavn 2200
-          <br />
-          Danmark
-        </address>
+          </address>
+          <address className="flex flex-col gap-2 items-center justify-center  p-4  text-center">
+            Københavngade 32A, <br /> københavn 2200
+            <br />
+            Danmark
+          </address>
+        </div>
+
         <div className="flex gap-4">
           <svg
             className="w-12 h-12 text-white stroke-white"

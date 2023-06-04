@@ -7,7 +7,7 @@ function PageAnimation({ children }) {
   const [parent] = useAutoAnimate();
 
 
-  return <div ref={parent}>{children}</div>;
+  return <div className="w-full" ref={parent}>{children}</div>;
 }
 
 export default PageAnimation;

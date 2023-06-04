@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`md:inline-grid mainGrid gap-4 max-md:p-4 p-8 ${inter.className}`}
+        className={`md:flex mainGrid gap-4 max-md:p-4 p-8 max-w-[1920px] mx-auto ${inter.className}`}
       >
         <div>
           <Menu/>

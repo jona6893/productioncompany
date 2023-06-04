@@ -24,7 +24,7 @@ body {
 }
 
 .mainGrid{
-  grid-template-columns: auto auto;
+  grid-template-columns: 20% auto;
 }
 
 .masonry {

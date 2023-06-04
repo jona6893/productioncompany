@@ -1,9 +1,7 @@
-"use client";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { useState, useCallback, useEffect } from "react";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Menu from "./components/Menu";
+import PageAnimation from "./components/PageAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,33 +11,21 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [isMobile, setIsMobile] = useState(false);
-  const [curMenu, setCurMenu] = useState(0);
-  const [parent] = useAutoAnimate();
+  
 
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkIfMobile();
-    window.addEventListener("resize", checkIfMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIfMobile);
-    };
-  }, []);
+ 
 
   return (
     <html lang="en">
       <body
-        ref={parent}
         className={`md:inline-grid mainGrid gap-4 max-md:p-4 p-8 ${inter.className}`}
       >
         <div>
-          <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
+          <Menu/>
         </div>
+        <PageAnimation>
         {children}
+        </PageAnimation>
       </body>
     </html>
   );

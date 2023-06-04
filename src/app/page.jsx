@@ -17,7 +17,6 @@ const pageVariants = {
   out: { opacity: 0, x: "100vw" },
 };
 
-
 const pageTransition = {
   type: "tween",
   ease: "easeInOut",
@@ -25,27 +24,21 @@ const pageTransition = {
 };
 
 export default function Home() {
-const [isMobile, setIsMobile] = useState(false);
- const [parent] = useAutoAnimate();
+  const [isMobile, setIsMobile] = useState(false);
+  const [parent] = useAutoAnimate();
 
- useEffect(() => {
-   const checkIfMobile = () => {
-     setIsMobile(window.innerWidth <= 768);
-   };
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-   checkIfMobile();
-   window.addEventListener("resize", checkIfMobile);
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
 
-   return () => {
-     window.removeEventListener("resize", checkIfMobile);
-   };
- }, []);
-
-
-
- 
-
-
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
 
   return (
     <>
@@ -72,8 +65,6 @@ const [isMobile, setIsMobile] = useState(false);
     </>
   );
 }
-
-
 
 /*  <AnimatePresence mode="wait">
    {curMenu === 0 && (

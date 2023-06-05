@@ -56,7 +56,7 @@ function ProjectsPage() {
   const years = ["2019", "2020", "2021", "2022", "2023"];
 
   return (
-    <div className="pageSection">
+    <div className="pageSection w-fit mx-auto">
       {years.reverse().map((year) => (
         <>
           <h2 className="text-9xl pb-4 md:px-4">{year}</h2>

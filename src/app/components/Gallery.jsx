@@ -75,7 +75,7 @@ function Gallery({ isMobile }) {
             height={1157}
             alt=""
           />
-          <div className="bg-black/75 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
+          <div className="bg-black/75 inset-0 absolute top-0 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center cursor-pointer">
             <h3 className="md:text-xl text-center">AWARD & NOMINEES</h3>
           </div>
         </div>

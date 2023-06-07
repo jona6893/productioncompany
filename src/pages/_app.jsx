@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from '../layouts/Layout.jsx'
+import Layout from "../app/layouts/Layout.jsx";
 // Frontend
 export default function MyApp({ Component, pageProps }) {
   return (

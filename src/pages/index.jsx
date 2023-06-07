@@ -5,7 +5,6 @@ import Head from "next/head";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Frontpage2 from "../app/components/Frontpage2";
 
-
 // Define your animations
 const pageVariants = {
   initial: { opacity: 0, x: 0 },
@@ -56,10 +55,9 @@ export default function Home() {
         </div> */}
         <div ref={parent}>
           {/* <Gallery isMobile={isMobile} /> */}
-          <Frontpage2/>
+          <Frontpage2 />
         </div>
       </main>
     </>
   );
 }
-

@@ -3,6 +3,7 @@ import Gallery from "./components/Gallery";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Frontpage2 from "./components/Frontpage2";
 
 
 // Define your animations
@@ -54,60 +55,11 @@ export default function Home() {
           <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
         </div> */}
         <div ref={parent}>
-          <Gallery isMobile={isMobile} />
+          {/* <Gallery isMobile={isMobile} /> */}
+          <Frontpage2/>
         </div>
       </main>
     </>
   );
 }
 
-/*  <AnimatePresence mode="wait">
-   {curMenu === 0 && (
-     <motion.div
-       key="gallery"
-       initial="initial"
-       animate="in"
-       exit="out"
-       variants={pageVariants}
-       transition={pageTransition}
-     >
-       <Gallery isMobile={isMobile} />
-     </motion.div>
-   )}
-   {curMenu === 1 && (
-     <motion.div
-       key="contact"
-       initial="initial"
-       animate="in"
-       exit="out"
-       variants={pageVariants}
-       transition={pageTransition}
-     >
-       <Projects isMobile={isMobile} />
-     </motion.div>
-   )}
-   {curMenu === 2 && (
-     <motion.div
-       key="about"
-       initial="initial"
-       animate="in"
-       exit="out"
-       variants={pageVariants}
-       transition={pageTransition}
-     >
-       <Contact />
-     </motion.div>
-   )}
-   {curMenu === 3 && (
-     <motion.div
-       key="about"
-       initial="initial"
-       animate="in"
-       exit="out"
-       variants={pageVariants}
-       transition={pageTransition}
-     >
-       <About />
-     </motion.div>
-   )}
- </AnimatePresence>; */

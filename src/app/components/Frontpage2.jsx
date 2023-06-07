@@ -43,7 +43,7 @@ const content = [{
   },
 ];
 
-  const refs = content.map(() => useRef(null));
+ /*  const refs = content.map(() => useRef(null));
 
   useEffect(() => {
     const handlers = content.map((_, index) => {
@@ -69,7 +69,7 @@ const content = [{
               behavior: "smooth",
             });
           }
-        }, 300);
+        }, 400);
       };
 
       return handler;
@@ -86,7 +86,7 @@ const content = [{
         article && article.removeEventListener("mouseenter", handlers[index]);
       });
     };
-  }, [refs, content]);
+  }, [refs, content]); */
 
 
 
@@ -97,14 +97,14 @@ console.log(content.length);
     <>
       {content.map((film, index) => (
         <article
-          ref={refs[index]}
+          /* ref={refs[index]} */
           key={index + 2}
           className={`${
             content.length !== index + 1 && "border-b-2 border-white"
           } `}
         >
           <Link href={`/films/${film.pageUrl}`}>
-          <div className="h-[250px] relative group hover:h-[80vh] w-full duration-300 overflow-hidden cursor-pointer ">
+          <div className="h-[250px] relative group hover:h-[70vh] w-full duration-300 overflow-hidden cursor-pointer ">
             <div
               className={`${film.overlayColor} absolute inset-0 group-hover:opacity-0 duration-200 flex flex-col items-center justify-center`}
             >

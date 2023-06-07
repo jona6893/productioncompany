@@ -1,9 +1,9 @@
 "use client";
-import Gallery from "./components/Gallery";
+import Gallery from "../app/components/Gallery";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import Frontpage2 from "./components/Frontpage2";
+import Frontpage2 from "../app/components/Frontpage2";
 
 
 // Define your animations

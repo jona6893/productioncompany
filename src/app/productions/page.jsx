@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function ProjectsPage() {
+function Productions() {
   const projects = [
     {
       title: "Hybenhjert",
@@ -87,4 +87,4 @@ function ProjectsPage() {
   );
 }
 
-export default ProjectsPage
+export default Productions

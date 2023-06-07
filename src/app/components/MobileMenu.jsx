@@ -21,13 +21,9 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
   return (
     <>
       <div className="sticky top-0 flex w-full items-center justify-between pb-4">
-       <Link href={"/"}>
-        <p
-        className='cursor-pointer'
-        
-        >
-          U.S.H. Media
-        </p></Link>
+        <Link href={"/"}>
+          <p className="cursor-pointer">U.S.H. Media</p>
+        </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -72,31 +68,33 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                   />
                 </svg>
               </div>
-            <Link href={"/"}>
-              <h1
-                className="grid text-7xl w-fit cursor-pointer"
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                 
-                }}
-              >
-                <span className="flex justify-between">
-                  <div>U.</div>
-                  <div>S.</div>
-                  <div>H.</div>
-                </span>
-                MEDIA
-              </h1></Link>
+              <Link href={"/"}>
+                <h1
+                  className="grid text-7xl w-fit cursor-pointer"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <span className="flex justify-between">
+                    <div>U.</div>
+                    <div>S.</div>
+                    <div>H.</div>
+                  </span>
+                  MEDIA
+                </h1>
+              </Link>
               <ul className="text-lg grid gap-2">
                 {menu.map((menu, index) => (
-                  <Link href={menu.toLowerCase()}><li key={index}
-                    className="hover:text-gray-400 cursor-pointer"
-                    onClick={() => {
-                      setIsOpen(!isOpen);
-                    }}
-                  >
-                    {menu}
-                  </li></Link>
+                  <Link key={index+3} href={menu.toLowerCase()}>
+                    <li
+                      className="hover:text-gray-400 cursor-pointer"
+                      onClick={() => {
+                        setIsOpen(!isOpen);
+                      }}
+                    >
+                      {menu}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </nav>

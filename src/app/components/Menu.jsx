@@ -8,7 +8,7 @@ import Link from "next/link";
 function Menu({ setCurMenu }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const menu = ["Productioner", "Kontakt", "Om os"];
+  const menu = ["Produktioner", "Kontakt", "Om os"];
 
   useEffect(() => {
     const checkIfMobile = () => {

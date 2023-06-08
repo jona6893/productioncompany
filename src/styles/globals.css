@@ -88,3 +88,16 @@ body::-webkit-scrollbar {
 .productionsGrid {
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
 }
+/* For mobile screens, use auto-fit. */
+.crewGrid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* For larger screens (for example, if you want to switch at 1024px, but you can adjust this to your needs), 
+use a media query to limit to 4 columns */
+@media screen and (min-width: 1350px) {
+  .crewGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

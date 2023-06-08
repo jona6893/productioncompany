@@ -5,12 +5,16 @@ import Head from "next/head";
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Head>
-      <link rel="stylesheet" href="https://use.typekit.net/tec1vhe.css"></link>
-    </Head>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/tec1vhe.css"
+        ></link>
+        <title>U.S.H. MEDIA - Film Production Company</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

@@ -29,6 +29,7 @@ export const productionQuery = `
       url
     }
     pageUrl
+    imdbPage
   }
       }
     `;

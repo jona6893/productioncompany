@@ -23,7 +23,7 @@ export const productionQuery = `
     release
     tItle
     stage
-    trailer
+    videoUrl
     type
     poster {
       url

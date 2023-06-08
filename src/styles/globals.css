@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -39,7 +40,11 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,a,p, address{
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
+ font-family: 'Helvetica 65 Medium';
+    font-weight: 400;
+    font-style: normal;
+
   color: white;
 }
 
@@ -71,4 +76,8 @@ body::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.productionsGrid {
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
 }

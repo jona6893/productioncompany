@@ -8,7 +8,7 @@ import Link from "next/link";
 function Menu({ setCurMenu }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const menu = ["Produktioner", "Kontakt", "Omos"];
+  const menu = ["Produktioner", "Kontakt", "Omos",];
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -36,17 +36,24 @@ function Menu({ setCurMenu }) {
         <nav className="text-white flex flex-col gap-8 sticky top-0">
           <Link href={"/"}>
             <h1 className="grid text-7xl w-fit cursor-pointer">
-              <span className="flex justify-between ">
-                <span>U.</span>
-                <span>S.</span>
-                <span>H.</span>
+              <span className="flex flex-col justify-between ">
+                <span className="flex justify-between ">
+                  <span>U.</span>
+                  <span>S.</span>
+                  <span>H.</span>
+                </span>
+                <hr />
               </span>
               MEDIA
+              <hr />
             </h1>
           </Link>
           <ul className="text-lg grid gap-4">
             {menu.map((menu, index) => (
-              <Link key={index + 1} href={menu.toLowerCase()}>
+              <Link
+                key={index + 1}
+                href={`http://localhost:3000/${menu.toLowerCase()}`}
+              >
                 <li className="hover:text-gray-400 cursor-pointer tracking-widest	">
                   {menu.toUpperCase()}
                 </li>

@@ -85,14 +85,17 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
               </Link>
               <ul className="text-lg grid gap-2">
                 {menu.map((menu, index) => (
-                  <Link key={index+3} href={menu.toLowerCase()}>
+                  <Link
+                    key={index + 3}
+                    href={`https://www.ush-media.com/${menu.url.toLowerCase()}`}
+                  >
                     <li
                       className="hover:text-gray-400 cursor-pointer"
                       onClick={() => {
                         setIsOpen(!isOpen);
                       }}
                     >
-                      {menu}
+                      {menu.menu}
                     </li>
                   </Link>
                 ))}

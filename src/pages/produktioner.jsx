@@ -68,7 +68,7 @@ function Productions() {
   const years = ["2019", "2020", "2021", "2022", "2023"];
 
   return (
-    <div className="grid productionsGrid  mx-auto w-full">
+    <div className="grid productionsGrid gap-4 mx-auto w-full">
       {projects.map((project) => {
         return (
           <article

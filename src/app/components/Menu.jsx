@@ -8,7 +8,11 @@ import Link from "next/link";
 function Menu({ setCurMenu }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const menu = ["Produktioner", "Kontakt", "Omos",];
+  const menu = [
+    { menu: "Produktioner", url: "Produktioner" },
+    { menu: "Kontakt", url: "Kontakt" },
+    { menu: "Om Os", url: "omos" },
+  ];
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -35,7 +39,7 @@ function Menu({ setCurMenu }) {
       ) : (
         <nav className="text-white flex flex-col gap-8 sticky top-0">
           <Link href={"/"}>
-            <h1 className="grid text-7xl w-fit cursor-pointer">
+            <h1 className="grid text-7xl w-fit  cursor-pointer">
               <span className="flex flex-col justify-between ">
                 <span className="flex justify-between ">
                   <span>U.</span>
@@ -44,7 +48,13 @@ function Menu({ setCurMenu }) {
                 </span>
                 <hr />
               </span>
-              MEDIA
+              <span className="text-xl flex justify-between">
+                <span>M</span>
+                <span>E</span>
+                <span>D</span>
+                <span>I</span>
+                <span>A</span>
+              </span>
               <hr />
             </h1>
           </Link>
@@ -52,10 +62,10 @@ function Menu({ setCurMenu }) {
             {menu.map((menu, index) => (
               <Link
                 key={index + 1}
-                href={`https://www.ush-media.com/${menu.toLowerCase()}`}
+                href={`https://www.ush-media.com/${menu.url.toLowerCase()}`}
               >
                 <li className="hover:text-gray-400 cursor-pointer tracking-widest	">
-                  {menu.toUpperCase()}
+                  {menu.menu.toUpperCase()}
                 </li>
               </Link>
             ))}

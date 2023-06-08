@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import React from 'react'
+import { GraphQLClient } from "graphql-request";
+import { productionQuery } from '@/app/modules/productionsQuery';
 
-
-function Productions() {
+function Productions({ productions }) {
   const projects = [
     {
       title: "Graffiti",
@@ -65,28 +66,25 @@ function Productions() {
       pageUrl: "hybenhjerte",
     },
   ];
+
+  console.log(productions);
+
   const years = ["2019", "2020", "2021", "2022", "2023"];
 
   return (
     <div className="grid productionsGrid gap-4 mx-auto w-full">
-      {projects.map((project) => {
+      {productions.map((production) => {
         return (
           <article
-            id={project.title.toLowerCase().replaceAll(" ", "")}
+            id={production.tItle.toLowerCase().replaceAll(" ", "")}
             className="text-white md:p-6 flex max-md:flex-col"
           >
-            <Link href={`films/${project.pageUrl}`}>
+            <Link href={`films/${production.pageUrl}`}>
             <img
               className={`md:max-h-[500px] aspect-[2/3]`}
-              src={project.img}
+              src={production.poster.url}
               alt=""
             /></Link>
-          {/*   <div className="flex flex-col gap-4">
-              <h3 className="text-3xl">{project.title}</h3>
-              <p className="max-w-[60ch]">{project.des}</p>
-              <p>{project.type}</p>
-              <p>Status: {project.status}</p>
-            </div> */}
           </article>
         );
       })}
@@ -94,4 +92,19 @@ function Productions() {
   );
 }
 
+
+
 export default Productions
+
+
+export async function getStaticProps() {
+  const hygraph = new GraphQLClient(`${process.env.HYGRAPH_ENDPOINT}`);
+
+  const { productions } = await hygraph.request(productionQuery);
+
+  return {
+    props: {
+      productions,
+    },
+  };
+}

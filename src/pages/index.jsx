@@ -1,9 +1,10 @@
 "use client";
-import Gallery from "../app/components/Gallery";
+import { GraphQLClient } from "graphql-request";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Frontpage2 from "../app/components/Frontpage2";
+import { frontpageQuery } from "@/app/modules/frontpageQuery";
 
 // Define your animations
 const pageVariants = {
@@ -18,7 +19,8 @@ const pageTransition = {
   duration: 0.3,
 };
 
-export default function Home() {
+export default function Home({ frontpages }) {
+  
   const [isMobile, setIsMobile] = useState(false);
   const [parent] = useAutoAnimate();
 
@@ -50,14 +52,23 @@ export default function Home() {
         />
       </Head>
       <main className="">
-        {/* <div>
-          <Menu setCurMenu={setCurMenu} isMobile={isMobile} />
-        </div> */}
         <div ref={parent}>
-          {/* <Gallery isMobile={isMobile} /> */}
-          <Frontpage2 />
+          <Frontpage2 frontpages={frontpages} />
         </div>
       </main>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const hygraph = new GraphQLClient(`${process.env.HYGRAPH_ENDPOINT}`);
+
+  const { frontpages } = await hygraph.request(frontpageQuery);
+
+  return {
+    props: {
+      frontpages,
+    },
+  };
 }

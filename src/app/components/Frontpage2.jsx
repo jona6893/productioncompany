@@ -4,11 +4,12 @@ import { useRef, useEffect } from "react";
 import Link from 'next/link';
 
 function Frontpage2() {
-const content = [{
+const content = [
+  {
     title: "Bjarke Tømmer Skrald",
     tagline: "Tag dine piller eller du får kræft",
     release: 2023,
-    poster: "images/bts.webp",
+    poster: "images/bts_screenshot.webp",
     video: "https://meritfilm.dk/Playground/videos/BTW_WEB_070623.mp4",
     overlayColor: "bg-black/25",
     pageUrl: "bts",
@@ -17,7 +18,7 @@ const content = [{
     title: "Hybenhjerte",
     tagline: "Tag dine piller eller du får kræft",
     release: 2023,
-    poster: "images/hyben.webp",
+    poster: "images/hyben_screenshot.webp",
     video: "https://meritfilm.dk/Playground/videos/HH_WEB_070623.mp4",
     overlayColor: "bg-black/25",
     pageUrl: "hybenhjerte",
@@ -26,17 +27,17 @@ const content = [{
     title: "Hold Hæft",
     tagline: "Tag dine piller eller du får kræft",
     release: 2023,
-    poster: "images/hk.webp",
+    poster: "images/hk_screenshot.webp",
     video: "https://meritfilm.dk/Playground/videos/HK_WEB_070623.mp4",
     overlayColor: "bg-black/25",
     pageUrl: "hold-kaeft",
   },
-  
+
   {
     title: "Jeg Har Aldrig",
     tagline: "Tag dine piller eller du får kræft",
     release: 2023,
-    poster: "url",
+    poster: "jha_screenshot.webp",
     video: "https://meritfilm.dk/Playground/videos/JHA_WEB_070623.mp4",
     overlayColor: "bg-black/25",
     pageUrl: "jeg-har-aldrig",
@@ -117,7 +118,7 @@ console.log(content.length);
               muted={true}
               loop={true}
               autoPlay={true}
-              /* poster="/images/pic11.webp" */
+              poster={film.poster}
               className={`block w-full h-full object-cover`}
             >
               <source src={film.video} type="video/mp4" />

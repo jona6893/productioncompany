@@ -73,9 +73,10 @@ function Productions({ productions }) {
 
   return (
     <div className="grid productionsGrid gap-4 mx-auto w-full">
-      {productions.map((production) => {
+      {productions.map((production, index) => {
         return (
           <article
+            key={index +4}
             id={production.tItle.toLowerCase().replaceAll(" ", "")}
             className="text-white md:p-6 flex max-md:flex-col"
           >

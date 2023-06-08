@@ -52,7 +52,7 @@ function Menu({ setCurMenu }) {
             {menu.map((menu, index) => (
               <Link
                 key={index + 1}
-                href={`http://localhost:3000/${menu.toLowerCase()}`}
+                href={`https://www.ush-media.com/${menu.toLowerCase()}`}
               >
                 <li className="hover:text-gray-400 cursor-pointer tracking-widest	">
                   {menu.toUpperCase()}

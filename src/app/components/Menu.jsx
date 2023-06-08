@@ -63,15 +63,21 @@ function Menu({ setCurMenu }) {
           <div className="flex flex-col ">
             <address className="flex flex-col gap-2">
               Write to us at:
-              <a href="mailto:webmaster@example.com">webmaster@example.com</a>
+              <a href="mailto:ulrikschmidthansen@gmail.com">
+                ulrikschmidthansen@gmail.com
+              </a>
+              <a href="mailto:jona.weldon@icloud.com">jona.weldon@icloud.com</a>
             </address>
             <address className="flex flex-col gap-2 justify-center ">
-              Call us on: <a href="tel:76482753">76 48 27 53</a>
+              Call us on: <a href="tel:76482753">+45 53 64 52 28</a>
             </address>
             <address className="flex flex-col gap-2 justify-center ">
-              Københavngade 32A, <br /> københavn 2200
+              Bøgevej 12 <br /> Glamsbjerg 5620
               <br />
               Danmark
+            </address>
+            <address className="flex flex-col gap-2 justify-center ">
+              CVR: 40 90 65 25
             </address>
           </div>
         </nav>

@@ -61,7 +61,7 @@ function Film({ film }) {
             return (
               <div
                 key={i + 5}
-                className="bg-slate-800 mx-w-96 p-4 roundeduppercase uppercase"
+                className="bg-slate-800 rounded-md mx-w-96 p-4 roundeduppercase uppercase"
               >
                 <p className="text-gray-200 text-sm">{member.function}:</p>
                 <p className="font-bold ">{member.name}</p>

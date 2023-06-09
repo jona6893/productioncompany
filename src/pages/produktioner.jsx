@@ -77,13 +77,13 @@ function Productions({ productions }) {
         return (
           <article
             key={index +4}
-            id={production.tItle.toLowerCase().replaceAll(" ", "")}
+            id={production.tItle?.toLowerCase().replaceAll(" ", "")}
             className="text-white md:p-6 flex max-md:flex-col"
           >
             <Link href={`films/${production.pageUrl}`}>
             <img
               className={`md:max-h-[500px] aspect-[2/3]`}
-              src={production.poster.url}
+              src={production.poster?.url}
               alt=""
             /></Link>
           </article>

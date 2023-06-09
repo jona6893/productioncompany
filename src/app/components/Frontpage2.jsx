@@ -41,7 +41,7 @@ function Frontpage2({ frontpages }) {
                 poster={film.frontpageBlocks.screenShotPoster.url}
                 className={`md:block w-full h-full object-cover max-md:hidden `}
               >
-                <source src={film.frontpageBlocks.video.url} type="video/mp4" />
+                {/* <source src={film.frontpageBlocks.video.url} type="video/mp4" /> */}
               </video>
             </div>
           </Link>

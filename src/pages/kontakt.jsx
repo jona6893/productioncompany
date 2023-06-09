@@ -1,11 +1,13 @@
 import React from "react";
 
+
+
 function Contact() {
   return (
     <div className="w-full">
       <p>PLACEHOLDER NOT STYLED AT ALL</p>
       <div className="w-fit m-auto flex flex-col gap-8 items-center p-4">
-        <h2 className="text-4xl">Contact</h2>
+        <h2 className="text-4xl">KONTAKT</h2>
         <div className="flex gap-8 flex-wrap items-center justify-center">
           <address className="flex flex-col gap-2">
             Write to us at:

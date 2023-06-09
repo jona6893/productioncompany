@@ -25,8 +25,10 @@ export const productionQuery = `
     stage
     videoUrl
     type
-    poster {
+     poster {
       url
+      width
+      height
     }
     pageUrl
     imdbPage

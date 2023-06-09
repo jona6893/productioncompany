@@ -16,7 +16,7 @@ function Film({ film }) {
   return (
     <section className="text-white p-8 flex flex-col gap-16">
       <div className="flex max-md:flex-col max-md:items-center md:justify-center gap-8">
-        <img className="w-96 " src={film.poster.url} alt="" />
+        <img className="w-96 " src={film.poster?.url} alt="" />
         <div className="flex flex-col gap-4">
           <h1 className="text-5xl flex items-center gap-4">
             {film.tItle}{" "}

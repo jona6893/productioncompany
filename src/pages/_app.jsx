@@ -11,6 +11,7 @@ export default function MyApp({ Component, pageProps }) {
           href="https://use.typekit.net/tec1vhe.css"
         ></link>
         <title>U.S.H. MEDIA - Film Production Company</title>
+         <meta name="description" content="U.S.H Media, a leading film production company, expertly transforms unique narratives into captivating cinematic experiences. Discover why filmmakers worldwide trust us for exceptional production quality and creative storytelling. Be part of the journey where imagination meets the silver screen!"></meta>
       </Head>
       <Layout>
         <Component {...pageProps} />

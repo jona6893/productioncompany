@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <div
-      className={`md:flex mainGrid gap-4 max-md:p-4 p-8 max-w-[1920px] mx-auto`}
+      className={`md:flex mainGrid gap-4max-w-[1920px] mx-auto`}
     >
       <div>
         <Menu />

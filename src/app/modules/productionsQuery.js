@@ -28,6 +28,9 @@ export const productionQuery = `
     poster {
       url
     }
+    backdrop {
+      url
+    }
     pageUrl
     imdbPage
   }

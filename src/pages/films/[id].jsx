@@ -19,8 +19,8 @@ function Film({ film }) {
       <div className="flex max-md:flex-col max-md:items-center md:justify-center gap-8">
         <img className="w-96 " src={film.poster?.url} alt="" />
         <div className="flex flex-col gap-4">
-          <h1 className="text-5xl flex items-center gap-4">
-            {film.tItle}{" "}
+          <h1 className="text-5xl flex items-center gap-4 titles">
+            {film.tItle}
             <span className="bg-yellow-500 hover:bg-yellow-400 p-1 rounded text-base cursor-pointer">
               <a
                 className="text-black font-sans font-bold"
@@ -32,25 +32,30 @@ function Film({ film }) {
             </span>
           </h1>
           <h4>{film.tagline}</h4>
+          {/* his parse might be a problem */}
           <p className="max-w-[48ch]">{parse(film.description?.html)}</p>
           <p className="font-bold">
             {" "}
-            <span className="font-normal text-sm text-neutral-600">Release: </span>
+            <span className="font-normal text-sm text-neutral-300 ">
+              Release:{" "}
+            </span>
             {film.release}
           </p>
           <p className="font-bold">
-            <span className="font-normal text-sm text-neutral-600">Status:</span>{" "}
+            <span className="font-normal text-sm text-neutral-300 ">
+              Status:
+            </span>{" "}
             {film.stage}
           </p>
           <p className="font-bold">
-            <span className="font-normal text-sm text-neutral-600">Type:</span>{" "}
+            <span className="font-normal text-sm text-neutral-300 ">Type:</span>{" "}
             {film.type}
           </p>
         </div>
       </div>
       {film.videoUrl !== null && (
         <div className="w-full flex flex-col items-center p-8">
-          <h3 className="text-center font-sans font-bold text-2xl mb-4 text-neutral-900">
+          <h3 className="text-center font-sans font-bold text-2xl mb-4 ">
             TRAILER
           </h3>
           <ReactPlayer
@@ -62,17 +67,15 @@ function Film({ film }) {
         </div>
       )}
       <div className="grid p-8">
-        <h3 className="text-center font-sans font-bold text-2xl mb-4 text-neutral-900">
-          CREW
-        </h3>
+        <h3 className="text-center font-sans font-bold text-2xl mb-4 ">CREW</h3>
         <div className="grid crewGrid gap-4 justify-end">
           {film.crewMembers.map((member, i) => {
             return (
               <div
                 key={i + 5}
-                className=" rounded-md mx-w-96 p-4 roundeduppercase uppercase"
+                className=" rounded-md mx-w-96 p-4 text-center roundeduppercase uppercase"
               >
-                <p className="text-neutral-600 text-sm">{member.function}:</p>
+                <p className="text-neutral-300 text-sm">{member.function}:</p>
                 <p className="font-bold ">{member.name}</p>
               </div>
             );

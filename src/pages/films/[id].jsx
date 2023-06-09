@@ -15,8 +15,8 @@ function Film({ film }) {
   console.log(film);
 
   return (
-    <section className="text-neutral-900 bg-neutral-50 flex flex-col gap-8">
-      <div className="w-fit mx-auto flex max-md:flex-col max-md:items-center md:justify-center gap-8 p-8 rounded-md ">
+    <section className="text-white p-8 flex flex-col gap-16">
+      <div className="flex max-md:flex-col max-md:items-center md:justify-center gap-8">
         <img className="w-96 " src={film.poster?.url} alt="" />
         <div className="flex flex-col gap-4">
           <h1 className="text-5xl flex items-center gap-4">

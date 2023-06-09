@@ -39,7 +39,7 @@ function Menu({ setCurMenu }) {
       ) : (
         <nav className="text-white flex flex-col gap-8 sticky top-0 p-8">
           <Link href={"/"}>
-            <h1 className="grid text-6xl w-full  cursor-pointer">
+            <h1 className="grid text-6xl w-full  cursor-pointer w-52">
               <span className="flex flex-col justify-between ">
                 <span className="flex gap-2 justify-between ">
                   <span>U.</span>
@@ -62,7 +62,7 @@ function Menu({ setCurMenu }) {
             {menu.map((menu, index) => (
               <Link
                 key={index + 1}
-                href={`https://www.ush-media.com/${menu.url.toLowerCase()}`}
+                href={`/${menu.url.toLowerCase()}`}
               >
                 <li className="hover:text-gray-400 cursor-pointer tracking-widest	">
                   {menu.menu.toUpperCase()}

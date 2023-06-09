@@ -27,6 +27,11 @@ function Frontpage2({ frontpages }) {
                 <h2 className="text-4xl">{film.frontpageBlocks.title}</h2>
                 <h3>{film.frontpageBlocks.subtitle}</h3>
               </div>
+              <img
+                className="max-md:block md:hidden w-full h-full object-cover "
+                src={film.frontpageBlocks.screenShotPoster.url}
+                alt=""
+              />
               <video
                 playsInline
                 webkit-playsinline="true"
@@ -34,9 +39,9 @@ function Frontpage2({ frontpages }) {
                 loop={true}
                 autoPlay={true}
                 poster={film.frontpageBlocks.screenShotPoster.url}
-                className={`block w-full h-full object-cover`}
+                className={`md:block w-full h-full object-cover max-md:hidden `}
               >
-                 {/* <source src={film.frontpageBlocks.video.url} type="video/mp4" /> */}
+                <source src={film.frontpageBlocks.video.url} type="video/mp4" />
               </video>
             </div>
           </Link>

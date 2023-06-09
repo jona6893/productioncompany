@@ -3,6 +3,7 @@ import { GraphQLClient } from "graphql-request";
 import { productionQuery } from "@/app/modules/productionsQuery";
 import dynamic from "next/dynamic";
 import parse from "html-react-parser";
+import Link from "next/link";
 
 const ReactPlayer = dynamic(
   () => import("react-player"),
@@ -14,8 +15,29 @@ function Film({ film }) {
   const { id } = router.query;
   console.log(film);
 
+
+
+
+
   return (
     <section className="text-white p-8 flex flex-col gap-16">
+      <Link href={"/"} className="border-2 border-white rounded-full w-fit p-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="w-10 h-10"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+          />
+        </svg>
+      </Link>
+
       <div className="flex max-md:flex-col max-md:items-center md:justify-center gap-8">
         <img className="w-96 " src={film.poster?.url} alt="" />
         <div className="flex flex-col gap-4">
@@ -33,7 +55,7 @@ function Film({ film }) {
           </h1>
           <h4>{film.tagline}</h4>
           {/* his parse might be a problem */}
-          <p className="max-w-[48ch]">{parse(film.description?.html)}</p>
+          <div className="max-w-[48ch]">{parse(film.description?.html)}</div>
           <p className="font-bold">
             {" "}
             <span className="font-normal text-sm text-neutral-300 ">

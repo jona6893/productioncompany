@@ -20,7 +20,7 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
 
   return (
     <>
-      <div className="sticky top-0 flex w-full items-center justify-between pb-4">
+      <div className="sticky top-0 flex w-full items-center justify-between p-4">
         <Link href={"/"}>
           <p className="cursor-pointer">U.S.H. Media</p>
         </Link>
@@ -69,18 +69,23 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                 </svg>
               </div>
               <Link href={"/"}>
-                <h1
-                  className="grid text-7xl w-fit cursor-pointer"
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                >
-                  <span className="flex justify-between">
-                    <div>U.</div>
-                    <div>S.</div>
-                    <div>H.</div>
+                <h1 className="grid text-6xl w-full  cursor-pointer w-52">
+                  <span className="flex flex-col justify-between ">
+                    <span className="flex gap-2 justify-between ">
+                      <span>U.</span>
+                      <span>S.</span>
+                      <span>H.</span>
+                    </span>
+                    <hr />
                   </span>
-                  MEDIA
+                  <span className="text-xl flex justify-between">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>A</span>
+                  </span>
+                  <hr />
                 </h1>
               </Link>
               <ul className="text-lg grid gap-2">

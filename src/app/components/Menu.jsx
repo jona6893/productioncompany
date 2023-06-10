@@ -39,7 +39,7 @@ function Menu({ setCurMenu }) {
       ) : (
         <nav className="text-white flex flex-col gap-8 sticky top-0 p-8">
           <Link href={"/"}>
-            <h1 className="grid text-6xl w-full  cursor-pointer w-52">
+            <h1 className="grid text-6xl cursor-pointer w-52">
               <span className="flex flex-col justify-between ">
                 <span className="flex gap-2 justify-between ">
                   <span>U.</span>

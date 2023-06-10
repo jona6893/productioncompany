@@ -50,8 +50,8 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
             variants={variants}
             className="fixed right-0 bg-black flex flex-col items-center w-full h-full inset-0 justify-start gap-8 z-10"
           >
-            <nav className="text-white p-4 flex flex-col gap-4 w-full">
-              <div className="flex justify-end">
+            <nav className="text-white p-4 flex flex-col items-center gap-4 w-full">
+              <div className="flex justify-end w-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -68,8 +68,9 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                   />
                 </svg>
               </div>
+              <div className='grid gap-4'>
               <Link href={"/"}>
-                <h1 className="grid text-6xl w-full  cursor-pointer w-52">
+                <h1 className="grid text-6xl cursor-pointer w-52">
                   <span className="flex flex-col justify-between ">
                     <span className="flex gap-2 justify-between ">
                       <span>U.</span>
@@ -105,6 +106,7 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
                   </Link>
                 ))}
               </ul>
+                </div>
             </nav>
           </motion.div>
         )}

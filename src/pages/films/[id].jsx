@@ -61,7 +61,7 @@ function Film({ film }) {
         </div>
       )}
       {/* Crew */}
-      {film.crewMembers && <Crew film={film} />}
+      {film.crewMembers.length >= 1 && <Crew film={film} />}
       {/* Awards */}
       {film.Awards && <Awards film={film} />}
     </section>

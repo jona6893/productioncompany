@@ -30,6 +30,11 @@ export const productionQuery = `
       width
       height
     }
+    setPhotos {
+      url
+      width
+      height
+    }
     pageUrl
     imdbPage
   }

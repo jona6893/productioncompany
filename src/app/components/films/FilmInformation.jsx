@@ -10,6 +10,7 @@ function FilmInformation({film}) {
         src={film.poster?.url}
         width={film.poster?.width}
         height={film.poster?.height}
+        alt='post of film'
       />
       <div className="flex flex-col gap-4">
         <h1 className="text-5xl flex items-center gap-4 titles">

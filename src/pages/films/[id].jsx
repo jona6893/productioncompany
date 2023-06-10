@@ -23,7 +23,7 @@ function Film({ film }) {
 
   return (
     <section className="text-white p-8 flex flex-col">
-      {/* Back Arrow */}
+      {/* Go Back Arrow */}
       <Link
         href="javascript:javascript:history.go(-1)"
         className="border-2 border-white rounded-full w-fit p-1 mb-4"

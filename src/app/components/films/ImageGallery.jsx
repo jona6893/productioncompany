@@ -7,7 +7,7 @@ function ImageGallery({film}) {
     const [open, setOpen] = useState(false);
     
     const images = []; 
-  film.setPhotos.forEach((e) => {
+  film.setPhotos?.forEach((e) => {
     let newimage = {
       src: e.url,
       loading: "lazy",
@@ -72,9 +72,9 @@ function handleClose(){
     <div>
       <Image
         onClick={() => setOpen(true)}
-        src={film.setPhotos[0].url}
-        width={film.setPhotos[0].width}
-        height={film.setPhotos[0].width}
+        src={film.setPhotos[0]?.url}
+        width={film.setPhotos[0]?.width}
+        height={film.setPhotos[0]?.width}
       />
       <Lightbox
         isOpen={open}

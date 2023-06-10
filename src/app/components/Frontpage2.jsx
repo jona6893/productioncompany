@@ -20,9 +20,9 @@ function Frontpage2({ frontpages }) {
           } `}
         >
           <Link href={`/films/${film.frontpageBlocks.pageUrl}`}>
-            <div className="h-[250px] relative group hover:h-[70vh] w-full duration-300 overflow-hidden cursor-pointer ">
+            <div className="h-[250px] relative group md:hover:h-[70vh] w-full duration-300 overflow-hidden cursor-pointer ">
               <div
-                className={`${film.overlayColor} absolute inset-0 group-hover:opacity-0 duration-300 flex flex-col items-center justify-center`}
+                className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex flex-col items-center justify-center`}
               >
                 <h2 className="text-4xl">{film.frontpageBlocks.title}</h2>
                 <h3>{film.frontpageBlocks.subtitle}</h3>
@@ -41,7 +41,7 @@ function Frontpage2({ frontpages }) {
                 poster={film.frontpageBlocks.screenShotPoster.url}
                 className={`md:block w-full h-full object-cover max-md:hidden `}
               >
-                <source src={film.frontpageBlocks.video.url} type="video/mp4" />
+                {/* <source src={film.frontpageBlocks.video.url} type="video/mp4" /> */}
               </video>
             </div>
           </Link>

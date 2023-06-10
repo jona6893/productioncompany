@@ -4,7 +4,7 @@ function Crew({film}) {
   return (
     <div className="grid justify-items-center p-8">
       <h3 className="text-center font-sans font-bold text-2xl mb-4 ">CREW</h3>
-      <div className="grid crewGrid gap-4 justify-end max-w-[1000px]">
+      <div className="grid crewGrid gap-4 justify-end">
         {film.crewMembers.map((member, i) => {
           return (
             <div

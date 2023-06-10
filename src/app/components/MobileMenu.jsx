@@ -22,7 +22,7 @@ function MobileMenu({ isOpen, setIsOpen, menu, setCurMenu }) {
     <>
       <div className="sticky top-0 flex w-full items-center justify-between p-4">
         <Link href={"/"}>
-          <p className="cursor-pointer">U.S.H. Media</p>
+          <p className="cursor-pointer text-xl">U.S.H. MEDIA</p>
         </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"

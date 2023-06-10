@@ -6,6 +6,7 @@ import Link from "next/link";
 import Awards from "@/app/components/films/Awards";
 import Crew from "@/app/components/films/Crew";
 import FilmInformation from "@/app/components/films/FilmInformation";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const ReactPlayer = dynamic(
   () => import("react-player"),
@@ -16,7 +17,7 @@ function Film({ film }) {
   const router = useRouter();
   const { id } = router.query;
   console.log(film)
-
+const [parent] = useAutoAnimate();
 
 
 
@@ -61,7 +62,7 @@ function Film({ film }) {
         </div>
       )}
       {/* Crew */}
-      {film.crewMembers.length >= 1 && <Crew film={film} />}
+      {film.crewMembers.length >= 1 && <Crew film={film} parent={parent}/>}
       {/* Awards */}
       {film.Awards && <Awards film={film} />}
     </section>

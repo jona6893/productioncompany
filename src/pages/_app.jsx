@@ -16,12 +16,11 @@ export default function MyApp({ Component, pageProps }) {
           content="U.S.H Media, a leading film production company, expertly transforms unique narratives into captivating cinematic experiences. Discover why filmmakers worldwide trust us for exceptional production quality and creative storytelling. Be part of the journey where imagination meets the silver screen!"
         ></meta>
 
-        <Script
-          strategy="lazyOnload"
+        <script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
+        ></script>
 
-        <Script strategy="lazyOnload">
+        <script>
           {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -30,7 +29,7 @@ export default function MyApp({ Component, pageProps }) {
                     page_path: window.location.pathname,
                     });
                 `}
-        </Script>
+        </script>
       </Head>
       <Layout>
         <Component {...pageProps} />

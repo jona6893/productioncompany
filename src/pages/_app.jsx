@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }) {
         ></meta>
 
         <script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-KWVK03Q1HR`}
         ></script>
 
         <script>
@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    gtag('config', 'G-KWVK03Q1HR', {
                     page_path: window.location.pathname,
                     });
                 `}

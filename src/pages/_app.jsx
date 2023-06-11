@@ -11,7 +11,25 @@ export default function MyApp({ Component, pageProps }) {
           href="https://use.typekit.net/tec1vhe.css"
         ></link>
         <title>U.S.H. MEDIA - Film Production Company</title>
-         <meta name="description" content="U.S.H Media, a leading film production company, expertly transforms unique narratives into captivating cinematic experiences. Discover why filmmakers worldwide trust us for exceptional production quality and creative storytelling. Be part of the journey where imagination meets the silver screen!"></meta>
+        <meta
+          name="description"
+          content="U.S.H Media, a leading film production company, expertly transforms unique narratives into captivating cinematic experiences. Discover why filmmakers worldwide trust us for exceptional production quality and creative storytelling. Be part of the journey where imagination meets the silver screen!"
+        ></meta>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KWVK03Q1HR"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)}
+              gtag('js', new Date());
+              gtag('config', 'G-KWVK03Q1HR');
+            `,
+          }}
+        ></script>
       </Head>
       <Layout>
         <Component {...pageProps} />

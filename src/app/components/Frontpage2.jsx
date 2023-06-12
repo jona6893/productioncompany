@@ -9,18 +9,15 @@ function Frontpage2({ frontpages }) {
   console.log(frontpages);
 
   return (
-    <>
+    <div className="flex w-full overflow-hidden">
       {frontpages.map((film, index) => (
         <article
           /* ref={refs[index]} */
           key={index + 2}
-          className={`${
-            film.frontpageBlocks.length !== index + 1 &&
-            "border-b-2 border-white"
-          } `}
+          className={`h-screen w-[25%] hover:w-[100%] duration-300 grow`}
         >
           <Link href={`/films/${film.frontpageBlocks.pageUrl}`}>
-            <div className="h-[250px] relative group md:hover:h-[70vh] w-full duration-300 overflow-hidden cursor-pointer ">
+            <div className="relative group w-full h-screen md:hover: duration-300 overflow-hidden cursor-pointer ">
               <div
                 className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex flex-col items-center justify-center`}
               >
@@ -47,7 +44,7 @@ function Frontpage2({ frontpages }) {
           </Link>
         </article>
       ))}
-    </>
+    </div>
   );
 }
 

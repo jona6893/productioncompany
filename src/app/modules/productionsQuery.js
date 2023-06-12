@@ -25,6 +25,13 @@ export const productionQuery = `
     stage
     videoUrl
     type
+    castMembers {
+      ... on CastMember {
+        id
+        castRole
+        castName
+      }
+    }
      poster {
       url
       width

@@ -8,6 +8,7 @@ import Crew from "@/app/components/films/Crew";
 import FilmInformation from "@/app/components/films/FilmInformation";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import ImageGallery from "@/app/components/films/ImageGallery";
+import Cast from "@/app/components/films/Cast";
 
 const ReactPlayer = dynamic(
   () => import("react-player"),
@@ -64,6 +65,8 @@ const [parent] = useAutoAnimate();
       )}
       {/* Crew */}
       {film.crewMembers.length >= 1 && <Crew film={film} parent={parent} />}
+      {/* Crew */}
+      {film.castMembers.length >= 1 && <Cast film={film} parent={parent} />}
       {/* Awards */}
       {film.Awards && <Awards film={film} />}
       {film.setPhotos && <ImageGallery film={film} />}

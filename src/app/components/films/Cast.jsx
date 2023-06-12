@@ -17,10 +17,10 @@ function Cast({ film, parent }) {
         <button
           className="absolute top-[10%] left-[150%] border-2 border-white rounded-full md:hidden"
           onClick={() => {
-            setcastIndex(() => {if(castIndex === 1){ return 1000} else if (castIndex === 1000) {
+            setCastIndex(() => {if(castIndex === 1){ return 1000} else if (castIndex === 1000) {
               return 1;
             }})
-            setcastExpand(() => !castExpand)}}
+            setCastExpand(() => !castExpand)}}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

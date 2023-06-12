@@ -17,10 +17,15 @@ function Crew({ film, parent }) {
         <button
           className="absolute top-[10%] left-[150%] border-2 border-white rounded-full md:hidden"
           onClick={() => {
-            setcrewIndex(() => {if(crewIndex === 1){ return 1000} else if (crewIndex === 1000) {
-              return 1;
-            }})
-            setcrewExpand(() => !crewExpand)}}
+            setcrewIndex(() => {
+              if (crewIndex === 1) {
+                return 1000;
+              } else if (crewIndex === 1000) {
+                return 1;
+              }
+            });
+            setcrewExpand(() => !crewExpand);
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +36,8 @@ function Crew({ film, parent }) {
             className={`w-6 h-6 duration-300 ${crewExpand && "rotate-45"}`}
           >
             <path
-              strokeLineCap="round"
-              strokeLineJoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>

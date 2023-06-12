@@ -31,8 +31,8 @@ function Cast({ film, parent }) {
             className={`w-6 h-6 duration-300 ${castExpand && "rotate-45"}`}
           >
             <path
-              strokeLineCap="round"
-              strokeLineJoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>
@@ -48,8 +48,8 @@ function Cast({ film, parent }) {
               key={i + 5}
               className=" rounded-md mx-w-96 p-4 text-center roundeduppercase uppercase"
             >
-              <p className="text-neutral-300 text-sm">{member.function}:</p>
-              <p className="font-bold ">{member.name}</p>
+              <p className="text-neutral-300 text-sm">{member.castRole}:</p>
+              <p className="font-bold ">{member.castName}</p>
             </div>
           );
         })}
@@ -68,8 +68,8 @@ function Cast({ film, parent }) {
                 key={i + 5}
                 className={` rounded-md mx-w-96 p-4 text-center roundeduppercase uppercase`}
               >
-                <p className="text-neutral-300 text-sm">{member.function}:</p>
-                <p className="font-bold ">{member.name}</p>
+                <p className="text-neutral-300 text-sm">{member.castRole}:</p>
+                <p className="font-bold ">{member.castName}</p>
               </div>
             );
         })}

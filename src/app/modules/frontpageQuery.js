@@ -10,6 +10,7 @@ frontpages {
         }
         title
         subtitle
+        vIdeoUrlCloudinary
         video {
           url
         }

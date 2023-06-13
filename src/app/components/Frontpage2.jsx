@@ -14,14 +14,14 @@ function Frontpage2({ frontpages }) {
         <article
           /* ref={refs[index]} */
           key={index + 2}
-          className={`md:h-screen md:w-[25%] hover:w-[100%] duration-300 grow`}
+          className={`md:h-screen md:w-[25%] hover:w-[150%] duration-300 grow`}
         >
           <Link href={`/films/${film.frontpageBlocks.pageUrl}`}>
             <div className="relative group w-full md:h-screen md:hover: duration-300 overflow-hidden cursor-pointer ">
               <div
-                className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex flex-col items-center justify-center`}
-              >
-                <h2 className="text-4xl">{film.frontpageBlocks.title}</h2>
+                className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex text-center flex-col items-center justify-center`}
+              > 
+                <h2 className="text-4xl overflow-hidden">{film.frontpageBlocks.title}</h2>
                 <h3>{film.frontpageBlocks.subtitle}</h3>
               </div>
               <img
@@ -38,7 +38,7 @@ function Frontpage2({ frontpages }) {
                 poster={film.frontpageBlocks.screenShotPoster.url}
                 className={`md:block w-full h-full object-cover max-md:hidden `}
               >
-                {/* <source src={film.frontpageBlocks.video.url} type="video/mp4" /> */}
+                <source src={film.frontpageBlocks.vIdeoUrlCloudinary} type="video/mp4" />
               </video>
             </div>
           </Link>

@@ -4,8 +4,6 @@ import { useRef, useEffect } from "react";
 import Link from 'next/link';
 
 function Frontpage2({ frontpages }) {
-  const {frontpageBlocks} = frontpages;
-
   console.log(frontpages);
 
   return (
@@ -19,9 +17,9 @@ function Frontpage2({ frontpages }) {
           <Link href={`/films/${film.frontpageBlocks.pageUrl}`}>
             <div className="relative group w-full md:h-screen md:hover: duration-300 overflow-hidden cursor-pointer ">
               <div
-                className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex text-center flex-col items-center justify-center z-[1]`}
+                className={`${film.overlayColor} absolute inset-0 opacity-0 md:group-hover:opacity-100  duration-300 flex text-center flex-col items-center justify-center z-[1]`}
               >
-                <h2 className="text-4xl overflow-hidden">
+                <h2 className="text-5xl overflow-hidden">
                   {film.frontpageBlocks.title}
                 </h2>
                 <h3>{film.frontpageBlocks.subtitle}</h3>

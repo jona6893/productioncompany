@@ -20,8 +20,10 @@ function Frontpage2({ frontpages }) {
             <div className="relative group w-full md:h-screen md:hover: duration-300 overflow-hidden cursor-pointer ">
               <div
                 className={`${film.overlayColor} absolute inset-0 md:group-hover:opacity-0 duration-300 flex text-center flex-col items-center justify-center`}
-              > 
-                <h2 className="text-4xl overflow-hidden">{film.frontpageBlocks.title}</h2>
+              >
+                <h2 className="text-4xl overflow-hidden">
+                  {film.frontpageBlocks.title}
+                </h2>
                 <h3>{film.frontpageBlocks.subtitle}</h3>
               </div>
               <img
@@ -36,9 +38,16 @@ function Frontpage2({ frontpages }) {
                 loop={true}
                 autoPlay={true}
                 poster={film.frontpageBlocks.screenShotPoster.url}
-                className={`md:block w-full h-full object-cover max-md:hidden `}
+                className={`md:block w-full h-full object-cover max-md:hidden ${
+                  index === 1 && "scale-[1.33]"
+                } ${index === 2 && "scale-[1.15]"} ${
+                  index === 3 && "scale-[1.15]"
+                }`}
               >
-                <source src={film.frontpageBlocks.vIdeoUrlCloudinary} type="video/mp4" />
+                <source
+                  src={film.frontpageBlocks.vIdeoUrlCloudinary}
+                  type="video/mp4"
+                />
               </video>
             </div>
           </Link>

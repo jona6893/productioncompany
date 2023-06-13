@@ -6,7 +6,7 @@ function FilmInformation({film}) {
   return (
     <div className="flex max-md:flex-col max-md:items-center md:justify-center gap-8">
       <Image
-        className="w-96 aspect-[2/3]"
+        className="w-96 aspect-[27/40]"
         src={film.poster?.url}
         width={film.poster?.width}
         height={film.poster?.height}

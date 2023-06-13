@@ -19,7 +19,7 @@ function Productions({ productions }) {
           >
             <Link href={`films/${production.pageUrl}`}>
               <Image
-                className={`md:max-w-[350px] aspect-[2/3]`}
+                className={`md:max-w-[350px] aspect-[27/40]`}
                 src={production.poster?.url}
                 alt="poster"
                 width={production.poster?.width}

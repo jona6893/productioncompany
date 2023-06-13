@@ -10,7 +10,7 @@ function Productions({ productions }) {
 
   return (
     <div className="flex flex-wrap gap-4 max-md:gap-8 mx-auto w-full p-8">
-      {productions.sort((a, b) => b.release - a.release).map((production, index) => {
+      {productions.map((production, index) => {
         return (
           <article
             key={index + 4}

@@ -70,7 +70,7 @@ function handleClose(){
 
   return (
     <div>
-      <div className="grid grid-cols-2 grid-row-2 w-full h-full relative cursor-pointer">
+      <div className="grid grid-cols-2 grid-rows-2  min-w-[24rem] max-w-[48rem] aspect-square  h-full relative cursor-pointer mx-auto">
         <div
           onClick={() => setOpen(true)}
           className="w-full h-full inset-0 absolute hover:bg-black/50 duration-300 bg-transparent flex items-center justify-center text-center"
@@ -89,13 +89,13 @@ function handleClose(){
           src={film.setPhotos[1]?.url}
           width={film.setPhotos[1]?.width}
           height={film.setPhotos[1]?.width}
-          className="col-start-2"
+          className="col-start-2 h-full object-cover"
         />
         <Image
           src={film.setPhotos[2]?.url}
           width={film.setPhotos[2]?.width}
           height={film.setPhotos[2]?.width}
-          className="col-start-2 border-t-4 border-white"
+          className="col-start-2 border-t-4 h-full border-white object-cover"
         />
       </div>
       <Lightbox

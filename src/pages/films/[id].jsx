@@ -69,7 +69,7 @@ const [parent] = useAutoAnimate();
       {film.castMembers.length >= 1 && <Cast film={film} parent={parent} />}
       {/* Awards */}
       {film.Awards && <Awards film={film} />}
-      {film.setPhotos && <ImageGallery film={film} />}
+      {film.setPhotos.length >= 1 && <ImageGallery film={film} />}
     </section>
   );
 }

@@ -1,6 +1,6 @@
 export const productionQuery = `
       {
-     productions {
+     productions(orderBy: date_DESC) {
     id
     awards {
       ... on Award {
@@ -23,6 +23,7 @@ export const productionQuery = `
     release
     tItle
     stage
+    date
     videoUrl
     type
     castMembers {

@@ -15,7 +15,7 @@ function Frontpage2({ frontpages }) {
           className={`md:h-screen md:w-[25%] hover:w-[200%] duration-300 grow`}
         >
           <Link href={`/films/${film.frontpageBlocks.pageUrl}`}>
-            <div className="relative group w-full md:h-screen md:hover: duration-300 overflow-hidden cursor-pointer border-x-2 border-white">
+            <div className="relative group w-full md:h-screen md:hover: duration-300 overflow-hidden cursor-pointer">
               <div
                 className={`${film.overlayColor} absolute inset-0 opacity-0 md:group-hover:opacity-100  duration-300 flex text-center flex-col items-center justify-center z-[1]`}
               >

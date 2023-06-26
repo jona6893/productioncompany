@@ -23,6 +23,7 @@ export default function Home({ frontpages }) {
   
   const [isMobile, setIsMobile] = useState(false);
   const [parent] = useAutoAnimate();
+  const [hoverTitle, setHoverTitle] = useState("PROduktioner");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -52,8 +53,11 @@ export default function Home({ frontpages }) {
         />
       </Head>
       <main className="">
-        <div ref={parent}>
-          <Frontpage2 frontpages={frontpages} />
+        <div ref={parent} className="relativ">
+          <h1 className="pointer-events-none text-7xl absolute z-10 top-[5%]	text-right pr-[5%]	w-full font-sans font-extrabold text-neutral-50/80 uppercase max-md:hidden">
+            {hoverTitle}
+          </h1>
+          <Frontpage2 frontpages={frontpages} setHoverTitle={setHoverTitle} />
         </div>
       </main>
     </>

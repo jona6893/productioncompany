@@ -34,7 +34,7 @@ const CustomRightArrowButton = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-10 h-10 stroke-white mr-4 z-[100]"
+      className="w-10 h-10 stroke-white mr-4 z-[100] cursor-pointer"
     >
       <path
         strokeLinecap="round"
@@ -53,7 +53,7 @@ const CustomLeftArrowButton =() => {
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-10 h-10 stroke-white ml-4 z-[100]"
+        className="w-10 h-10 stroke-white ml-4 z-[100] cursor-pointer"
       >
         <path
           strokeLinecap="round"
@@ -70,33 +70,19 @@ function handleClose(){
 
   return (
     <div>
-      <div className="grid grid-cols-2 grid-rows-2  min-w-[24rem] max-w-[48rem] aspect-square  h-full relative cursor-pointer mx-auto">
-        <div
-          onClick={() => setOpen(true)}
-          className="w-full h-full inset-0 absolute hover:bg-black/50 duration-300 bg-transparent flex items-center justify-center text-center"
-        >
-          <h3 className="bg-white  text-black px-4 py-2 rounded-md hover:scale-[1.05] duration-300">
-            Behind The Scenes <br /> Galleri
-          </h3>
-        </div>
-        <Image
-          src={film.setPhotos[0]?.url}
-          width={film.setPhotos[0]?.width}
-          height={film.setPhotos[0]?.width}
-          className="row-span-2 col-start-1 h-full object-cover border-r-4 border-white"
-        />
-        <Image
-          src={film.setPhotos[1]?.url}
-          width={film.setPhotos[1]?.width}
-          height={film.setPhotos[1]?.width}
-          className="col-start-2 h-full object-cover"
-        />
-        <Image
-          src={film.setPhotos[2]?.url}
-          width={film.setPhotos[2]?.width}
-          height={film.setPhotos[2]?.width}
-          className="col-start-2 border-t-4 h-full border-white object-cover"
-        />
+      <div className="grid grid-cols-3 gap-4  min-w-[24rem] max-w-[48rem] h-full relative cursor-pointer mx-auto">
+        
+        {film.setPhotos.map((photo, index) => (
+          <Image
+            onClick={() => {
+              setCurrentIndex(index)
+              setOpen(true)}}
+            src={photo?.url}
+            width={photo?.width}
+            height={photo?.width}
+            className="object-cover aspect-square"
+          />
+        ))}
       </div>
       <Lightbox
         isOpen={open}

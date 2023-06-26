@@ -70,17 +70,17 @@ function handleClose(){
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-4  min-w-[24rem] max-w-[48rem] h-full relative cursor-pointer mx-auto">
-        
+      <div className="grid grid-cols-3 gap-4  min-w-[24rem] h-full relative mx-auto p-4">
         {film.setPhotos.map((photo, index) => (
           <Image
             onClick={() => {
-              setCurrentIndex(index)
-              setOpen(true)}}
+              setCurrentIndex(index);
+              setOpen(true);
+            }}
             src={photo?.url}
             width={photo?.width}
             height={photo?.width}
-            className="object-cover aspect-square"
+            className="object-cover aspect-square hover:scale-[1.05] duration-300 cursor-pointer"
           />
         ))}
       </div>

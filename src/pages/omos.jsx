@@ -2,6 +2,7 @@ import React from 'react'
 import { GraphQLClient } from "graphql-request";
 import { aboutQuery } from "@/app/modules/aboutQuery";
 import Image from 'next/image';
+import Head from 'next/head';
 
 function About({abouts}) {
   const { aboutPeople, aboutBlocks } = abouts[0];
@@ -9,13 +10,18 @@ function About({abouts}) {
   
   return (
     <section className="text-white grid gap-16 p-8">
+      <Head>
+        <title>
+          About
+        </title>
+      </Head>
       <div className="grid md:grid-cols-2 gap-4 items-center justify-items-center">
         <div>
           <h2 className="text-4xl mb-4">{aboutBlocks.title}</h2>
           <p className="max-w-[48ch]">{aboutBlocks.description}</p>
         </div>
         <Image
-          className=''
+          className=""
           src={aboutBlocks.photo?.url}
           width={aboutBlocks.photo?.width}
           height={aboutBlocks.photo?.height}

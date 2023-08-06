@@ -9,6 +9,7 @@ import FilmInformation from "@/app/components/films/FilmInformation";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import ImageGallery from "@/app/components/films/ImageGallery";
 import Cast from "@/app/components/films/Cast";
+import Head from "next/head";
 
 const ReactPlayer = dynamic(
   () => import("react-player"),
@@ -26,6 +27,9 @@ const [parent] = useAutoAnimate();
 
   return (
     <section className="text-white md:p-8 max-md:px-4 max-md:pb-4 flex flex-col">
+      <Head>
+        <title>{film.tItle} - {film.type}</title>
+      </Head>
       {/* Go Back Arrow */}
       <Link
         href="javascript:javascript:history.go(-1)"

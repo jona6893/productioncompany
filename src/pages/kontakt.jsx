@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 
 
@@ -5,6 +6,11 @@ import React from "react";
 function Contact() {
   return (
     <div className="w-full">
+      <Head>
+        <title>
+          Kontakt - U.S.H. Media
+        </title>
+      </Head>
       <p>PLACEHOLDER NOT STYLED AT ALL</p>
       <div className="w-fit m-auto flex flex-col gap-8 items-center p-4">
         <h2 className="text-4xl">KONTAKT</h2>

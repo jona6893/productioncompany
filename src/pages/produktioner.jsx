@@ -3,6 +3,7 @@ import React from 'react'
 import { GraphQLClient } from "graphql-request";
 import { productionQuery } from '@/app/modules/productionsQuery';
 import Image from 'next/image';
+import Head from 'next/head';
 
 function Productions({ productions }) {
 
@@ -10,6 +11,11 @@ function Productions({ productions }) {
 
   return (
     <div className="flex flex-wrap gap-4 max-md:gap-8 mx-auto w-full p-8">
+      <Head>
+        <title>
+          Film Produktioner
+        </title>
+      </Head>
       {productions.map((production, index) => {
         return (
           <article

@@ -23,10 +23,6 @@ function Frontpage2({ frontpages, setHoverTitle }) {
               <div
                 className={`${film.overlayColor} bg-black/20  absolute inset-0 opacity-100 md:group-hover:opacity-0 duration-500 flex text-center flex-col items-center justify-center z-[1]`}
               >
-               {/*  <h2 className="text-5xl overflow-hidden">
-                  {film.frontpageBlocks.title}
-                </h2>
-                <h3>{film.frontpageBlocks.subtitle}</h3> */}
               </div>
               <img
                 className="max-md:block md:hidden w-full h-full object-cover "
@@ -47,7 +43,7 @@ function Frontpage2({ frontpages, setHoverTitle }) {
                 }`}
               >
                 <source
-                  src={film.frontpageBlocks.vIdeoUrlCloudinary}
+                 /*  src={film.frontpageBlocks.vIdeoUrlCloudinary} */
                   type="video/mp4"
                 />
               </video>

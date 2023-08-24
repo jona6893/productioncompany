@@ -54,9 +54,9 @@ export default function Home({ frontpages }) {
       </Head>
       <main className="">
         <div ref={parent} className="relativ">
-          <h1 className="pointer-events-none text-7xl absolute z-10 top-[5%]	text-right pr-[5%]	w-full font-sans font-extrabold text-neutral-50/80 uppercase max-md:hidden">
+        {/*   <h1 className="pointer-events-none text-7xl absolute z-10 top-[5%]	text-right pr-[5%]	w-full font-sans font-extrabold text-neutral-50/80 uppercase max-md:hidden">
             {hoverTitle}
-          </h1>
+          </h1> */}
           <Frontpage2 frontpages={frontpages} setHoverTitle={setHoverTitle} />
         </div>
       </main>

@@ -37,9 +37,9 @@ function Menu({ setCurMenu }) {
           setCurMenu={setCurMenu}
         />
       ) : (
-        <nav className="text-white flex flex-col gap-8 sticky top-0 p-8">
+        <nav className="absolute text-white flex justify-between items-center gap-8 z-10 w-full top-0 py-8 px-6 bg-black">
           <Link href={"/"}>
-            <h1 className="grid text-6xl cursor-pointer w-52">
+            <h1 className="grid text-4xl cursor-pointer w-fit ">
               <span className="flex flex-col justify-between ">
                 <span className="flex gap-2 justify-between ">
                   <span>U.</span>
@@ -48,7 +48,7 @@ function Menu({ setCurMenu }) {
                 </span>
                 <hr />
               </span>
-              <span className="text-xl flex justify-between">
+              <span className="text-sm flex justify-between">
                 <span>M</span>
                 <span>E</span>
                 <span>D</span>
@@ -58,7 +58,7 @@ function Menu({ setCurMenu }) {
               <hr />
             </h1>
           </Link>
-          <ul className="text-lg grid gap-4">
+          <ul className="text-lg flex gap-4">
             {menu.map((menu, index) => (
               <Link
                 key={index + 1}
@@ -70,7 +70,7 @@ function Menu({ setCurMenu }) {
               </Link>
             ))}
           </ul>
-          <div className="flex flex-col ">
+          {/* <div className="flex flex-col ">
             <address className="flex flex-col gap-2">
               Write to us at:
               <a href="mailto:ulrikschmidthansen@gmail.com">
@@ -89,7 +89,7 @@ function Menu({ setCurMenu }) {
             <address className="flex flex-col gap-2 justify-center ">
               CVR: 40 90 65 25
             </address>
-          </div>
+          </div> */}
         </nav>
       )}
     </>

@@ -7,10 +7,31 @@ function Frontpage2({ frontpages, setHoverTitle }) {
   console.log(frontpages);
 
   return (
-    <div className="md:flex w-full overflow-hidden">
-      {frontpages.map((film, index) => (
+    <div className="md:flex w-full overflow-hidden h-screen">
+      <video
+        playsInline
+        webkit-playsinline="true"
+        muted={true}
+        loop={true}
+        autoPlay={true}
+        poster={frontpages[0].frontpageBlocks.screenShotPoster.url}
+        className={`md:block w-full h-full object-cover max-md:hidden `}
+      >
+        <source
+          /* src={frontpages[0].frontpageBlocks.vIdeoUrlCloudinary} */
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
+}
+
+export default Frontpage2
+
+
+{/* {frontpages.map((film, index) => (
         <article
-          /* ref={refs[index]} */
+
           key={index + 2}
           className={`md:h-screen md:w-[25%] md:hover:w-[200%] duration-300 grow`}
         >
@@ -43,16 +64,11 @@ function Frontpage2({ frontpages, setHoverTitle }) {
                 }`}
               >
                 <source
-                 /*  src={film.frontpageBlocks.vIdeoUrlCloudinary} */
+                 src={film.frontpageBlocks.vIdeoUrlCloudinary}
                   type="video/mp4"
                 />
               </video>
             </div>
           </Link>
         </article>
-      ))}
-    </div>
-  );
-}
-
-export default Frontpage2
+      ))} */}

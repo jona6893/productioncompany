@@ -5,6 +5,8 @@ import Head from "next/head";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Frontpage2 from "../app/components/Frontpage2";
 import { frontpageQuery } from "@/app/modules/frontpageQuery";
+import ProjectGallery from "@/app/components/blocks/ProjectGallery";
+import { productionQuery } from "@/app/modules/productionsQuery";
 
 // Define your animations
 const pageVariants = {
@@ -19,8 +21,7 @@ const pageTransition = {
   duration: 0.3,
 };
 
-export default function Home({ frontpages }) {
-  
+export default function Home({ frontpages, productions }) {
   const [isMobile, setIsMobile] = useState(false);
   const [parent] = useAutoAnimate();
   const [hoverTitle, setHoverTitle] = useState("PROduktioner");
@@ -54,10 +55,11 @@ export default function Home({ frontpages }) {
       </Head>
       <main className="">
         <div ref={parent} className="relativ">
-        {/*   <h1 className="pointer-events-none text-7xl absolute z-10 top-[5%]	text-right pr-[5%]	w-full font-sans font-extrabold text-neutral-50/80 uppercase max-md:hidden">
+          {/*   <h1 className="pointer-events-none text-7xl absolute z-10 top-[5%]	text-right pr-[5%]	w-full font-sans font-extrabold text-neutral-50/80 uppercase max-md:hidden">
             {hoverTitle}
           </h1> */}
           <Frontpage2 frontpages={frontpages} setHoverTitle={setHoverTitle} />
+          <ProjectGallery productions={productions} />
         </div>
       </main>
     </>
@@ -69,10 +71,12 @@ export async function getStaticProps() {
   const hygraph = new GraphQLClient(`${process.env.HYGRAPH_ENDPOINT}`);
 
   const { frontpages } = await hygraph.request(frontpageQuery);
+  const { productions } = await hygraph.request(productionQuery);
 
   return {
     props: {
       frontpages,
+      productions,
     },
   };
 }
